@@ -50,7 +50,11 @@ const findSongWithTitle = (title) => songs.find((song) => song.title === title);
 const findSongWithgenre = (genre, songs) =>
   songs.filter((song) => song.genre == genre);
 
+const findSongWhoWereOnFire = (songs) =>
+  songs.filter((song) => song.wasOnFire).length;
+
 const showSongs = (songs) => songs.forEach((song) => console.log(song.title));
 
 showSongs(songs);
 showSongs(findSongWithgenre("Metal progresivo", songs));
+console.log(findSongWhoWereOnFire(songs));
