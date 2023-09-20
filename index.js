@@ -55,6 +55,8 @@ const findSongWhoWereOnFire = (songs) =>
 
 const showSongs = (songs) => songs.forEach((song) => console.log(song.title));
 
+const getSortedSongsByRelease = (songs) =>
+  songs.toSorted((songA, songB) => songA.yearOfRelease - songB.yearOfRelease);
+
+showSongs(getSortedSongsByRelease(songs));
 showSongs(songs);
-showSongs(findSongWithgenre("Metal progresivo", songs));
-console.log(findSongWhoWereOnFire(songs));
