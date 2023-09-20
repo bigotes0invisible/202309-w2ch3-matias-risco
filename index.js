@@ -53,10 +53,12 @@ const findSongWithgenre = (genre, songs) =>
 const findSongWhoWereOnFire = (songs) =>
   songs.filter((song) => song.wasOnFire).length;
 
-const showSongs = (songs) => songs.forEach((song) => console.log(song.title));
-
 const getSortedSongsByRelease = (songs) =>
   songs.toSorted((songA, songB) => songA.yearOfRelease - songB.yearOfRelease);
 
-showSongs(getSortedSongsByRelease(songs));
+const getSongsTitles = (songs) => songs.map((song) => song.title);
+
+const showSongs = (songs) => songs.forEach((song) => console.log(song.title));
+
 showSongs(songs);
+console.log(getSongsTitles(songs));
