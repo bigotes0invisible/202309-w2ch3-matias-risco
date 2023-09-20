@@ -1,7 +1,7 @@
 const songs = [
   {
     title: "Hayloft I",
-    Artist: "Mother Mother",
+    artist: "Mother Mother",
     genres: "Indie rock",
     duration: "3:24",
     yearOfRelease: 2008,
@@ -9,7 +9,7 @@ const songs = [
   },
   {
     title: "La posada de los muertos",
-    Artist: "Mägo de Oz",
+    artist: "Mägo de Oz",
     genres: "Metal progresivo",
     duration: "4:45",
     yearOfRelease: 2005,
@@ -17,10 +17,23 @@ const songs = [
   },
   {
     title: "Vitality",
-    Artist: "Mittsies",
+    artist: "Mittsies",
     genres: "Instrumental",
     duration: "3:37",
     yearOfRelease: 2020,
     wasOnFire: false,
   },
 ];
+newsong = {
+  title: "hola",
+  artist: "hola",
+  genres: "hola",
+  duration: "hola",
+  yearOfRelease: 2222,
+  wasOnFire: true,
+};
+const addToSongs = (newsong) => songs.push(newsong);
+
+songs.forEach((song) => console.log(song.title));
+addToSongs(newsong);
+songs.forEach((song) => console.log(song.title));
