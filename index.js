@@ -58,7 +58,18 @@ const getSortedSongsByRelease = (songs) =>
 
 const getSongsTitles = (songs) => songs.map((song) => song.title);
 
+const getAverageDurationOfSongs = (songs) =>
+  songs
+    .map((song) => song.duration)
+    .map((song) =>
+      song
+        .split(":")
+        .map((song, position) => Number(song) / Math.pow(60, position))
+        .reduce((totalTime, time) => totalTime + time)
+    )
+    .reduce((totalTime, timeInMin) => totalTime + timeInMin) / songs.length;
+
 const showSongs = (songs) => songs.forEach((song) => console.log(song.title));
 
 showSongs(songs);
-console.log(getSongsTitles(songs));
+console.log(getAverageDurationOfSongs(songs));
