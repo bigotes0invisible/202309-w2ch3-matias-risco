@@ -40,11 +40,13 @@ const deleteFromSongsWithTitle = (title) => {
   let index = 0;
   songs.find((song, position) => {
     index = position;
-    return song.title == title;
+    return song.title === title;
   });
   songs.splice(index, index);
 };
 
+const findSongWithTitle = (title) => songs.find((song) => song.title === title);
+
 songs.forEach((song) => console.log(song.title));
-deleteFromSongsWithTitle("La posada de los muertos");
+console.log(findSongWithTitle("La posada de los muertos"));
 songs.forEach((song) => console.log(song.title));
