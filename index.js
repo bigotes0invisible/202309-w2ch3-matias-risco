@@ -2,7 +2,7 @@ const songs = [
   {
     title: "Hayloft I",
     artist: "Mother Mother",
-    genres: "Indie rock",
+    genre: "Indie rock",
     duration: "3:24",
     yearOfRelease: 2008,
     wasOnFire: true,
@@ -10,7 +10,7 @@ const songs = [
   {
     title: "La posada de los muertos",
     artist: "Mägo de Oz",
-    genres: "Metal progresivo",
+    genre: "Metal progresivo",
     duration: "4:45",
     yearOfRelease: 2005,
     wasOnFire: true,
@@ -18,7 +18,7 @@ const songs = [
   {
     title: "Vitality",
     artist: "Mittsies",
-    genres: "Instrumental",
+    genre: "Instrumental",
     duration: "3:37",
     yearOfRelease: 2020,
     wasOnFire: false,
@@ -28,7 +28,7 @@ const songs = [
 newsong = {
   title: "hola",
   artist: "hola",
-  genres: "hola",
+  genre: "hola",
   duration: "hola",
   yearOfRelease: 2222,
   wasOnFire: true,
@@ -47,6 +47,10 @@ const deleteFromSongsWithTitle = (title) => {
 
 const findSongWithTitle = (title) => songs.find((song) => song.title === title);
 
-songs.forEach((song) => console.log(song.title));
-console.log(findSongWithTitle("La posada de los muertos"));
-songs.forEach((song) => console.log(song.title));
+const findSongWithgenre = (genre, songs) =>
+  songs.filter((song) => song.genre == genre);
+
+const showSongs = (songs) => songs.forEach((song) => console.log(song.title));
+
+showSongs(songs);
+showSongs(findSongWithgenre("Metal progresivo", songs));
