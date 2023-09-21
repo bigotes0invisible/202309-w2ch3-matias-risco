@@ -36,15 +36,15 @@ newsong = {
 
 const addToSongs = (newsong) => songs.push(newsong);
 
-const deleteFromSongsWithTitle = (title) =>
+const deleteFromSongsByTitle = (title) =>
   songs.splice(
     songs.indexOf((song) => song.title === title),
     1
   );
 
-const findSongWithTitle = (title) => songs.find((song) => song.title === title);
+const findSongByTitle = (title) => songs.find((song) => song.title === title);
 
-const findSongWithgenre = (genre, songs) =>
+const findSongBygenre = (genre, songs) =>
   songs.filter((song) => song.genre === genre);
 
 const findSongWhoWereOnFire = (songs) =>
