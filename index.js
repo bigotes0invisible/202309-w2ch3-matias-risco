@@ -1,5 +1,6 @@
 const songs = [
   {
+    id: "001",
     title: "Hayloft I",
     artist: "Mother Mother",
     genre: "Indie rock",
@@ -8,6 +9,7 @@ const songs = [
     wasPopular: true,
   },
   {
+    id: "002",
     title: "La posada de los muertos",
     artist: "Mägo de Oz",
     genre: "Metal progresivo",
@@ -16,6 +18,7 @@ const songs = [
     wasPopular: true,
   },
   {
+    id: "003",
     title: "Vitality",
     artist: "Mittsies",
     genre: "Instrumental",
@@ -26,6 +29,7 @@ const songs = [
 ];
 
 newsong = {
+  id: "015",
   title: "hola",
   artist: "hola",
   genre: "hola",
