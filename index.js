@@ -5,7 +5,7 @@ const songs = [
     genre: "Indie rock",
     duration: "3:24",
     yearOfRelease: 2008,
-    wasOnFire: true,
+    wasPopular: true,
   },
   {
     title: "La posada de los muertos",
@@ -13,7 +13,7 @@ const songs = [
     genre: "Metal progresivo",
     duration: "4:45",
     yearOfRelease: 2005,
-    wasOnFire: true,
+    wasPopular: true,
   },
   {
     title: "Vitality",
@@ -21,7 +21,7 @@ const songs = [
     genre: "Instrumental",
     duration: "3:37",
     yearOfRelease: 2020,
-    wasOnFire: false,
+    wasPopular: false,
   },
 ];
 
@@ -31,7 +31,7 @@ newsong = {
   genre: "hola",
   duration: "hola",
   yearOfRelease: 2222,
-  wasOnFire: true,
+  wasPopular: true,
 };
 
 const addToSongs = (newsong) => songs.push(newsong);
@@ -47,8 +47,8 @@ const findSongByTitle = (title) => songs.find((song) => song.title === title);
 const findSongBygenre = (genre, songs) =>
   songs.filter((song) => song.genre === genre);
 
-const findSongWhoWereOnFire = (songs) =>
-  songs.filter((song) => song.wasOnFire).length;
+const findSongWhoWerePopular = (songs) =>
+  songs.filter((song) => song.wasPopular).length;
 
 const getSortedSongsByRelease = (songs) =>
   songs.toSorted((songA, songB) => songA.yearOfRelease - songB.yearOfRelease);
